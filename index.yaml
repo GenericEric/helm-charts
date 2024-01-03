@@ -3,6 +3,24 @@ entries:
   vaultwarden:
   - apiVersion: v2
     appVersion: 1.30.1
+    created: "2024-01-03T19:06:44.303168879Z"
+    description: Unofficial Bitwarden compatible server written in Rust.
+    digest: e60a94154b7c64d2deb1fd622ef9e02baf331c7308cc550e7bfbf05d699db62a
+    keywords:
+    - vaultwarden
+    - passwords
+    - bitwarden
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: vaultwarden
+    type: application
+    urls:
+    - https://github.com/GenericEric/helm-charts/releases/download/vaultwarden-0.0.3/vaultwarden-0.0.3.tgz
+    version: 0.0.3
+  - apiVersion: v2
+    appVersion: 1.30.1
     created: "2024-01-03T19:01:34.541432792Z"
     description: Unofficial Bitwarden compatible server written in Rust.
     digest: b5a6a2924a9f54785d360df835e639c32ead0b589f7984b3666d4c18a18849ff
@@ -37,4 +55,4 @@ entries:
     urls:
     - https://github.com/GenericEric/helm-charts/releases/download/vaultwarden-0.0.1/vaultwarden-0.0.1.tgz
     version: 0.0.1
-generated: "2024-01-03T19:01:34.541444614Z"
+generated: "2024-01-03T19:06:44.303184228Z"
