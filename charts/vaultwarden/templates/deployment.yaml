@@ -43,6 +43,20 @@ spec:
         - name: ADMIN_TOKEN
           value: "{{ .Values.adminPanel.token }}"
 {{ end }}
+{{ if .Values.email.enabled }}
+        - name: SMTP_HOST
+          value: "{{ .Values.email.host }}"
+        - name: SMTP_FROM
+          value: "{{ .Values.email.from }}"
+        - name: SMTP_security
+          value: "{{ .Values.email.security }}"
+        - name: SMTP_USERNAME
+          value: "{{ .Values.email.username }}"
+        - name: SMTP_PASSWORD
+          value: "{{ .Values.email.password }}"
+        - name: SMTP_PORT
+          value: "{{ .Values.email.port }}"
+{{ end }}
         ports:
         - containerPort:  {{ .Values.service.port }}
           name:  {{ .Values.appName }}

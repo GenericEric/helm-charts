@@ -11,6 +11,15 @@ env:
   PGID: 568
   PUID: 568
 
+email:
+  enabled: true
+  host: mail.example.com
+  from: vaultwarden@example.com
+  port: 587
+  security: tls
+  username: vaultwarden@example.com
+  password: ""
+
 adminPanel:
   enabled: true
   token: ""
