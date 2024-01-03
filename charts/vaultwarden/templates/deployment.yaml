@@ -39,6 +39,10 @@ spec:
         - name: DATABASE_URL
           value: "{{ .Values.database.URL }}"
 {{ end }}
+{{ if .Values.adminPanel.enabled }}
+        - name: ADMIN_TOKEN
+          value: "{{ .Values.adminPanel.token }}"
+{{ end }}
         ports:
         - containerPort:  {{ .Values.service.port }}
           name:  {{ .Values.appName }}
