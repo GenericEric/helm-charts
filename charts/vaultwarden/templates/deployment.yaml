@@ -35,7 +35,7 @@ spec:
           value: "{{ .Values.env.PUID }}"
         - name: PGID
           value: "{{ .Values.env.PGID }}"
-{{ if .Values.database.external.enabled }}
+{{ if .Values.database.external }}
         - name: DATABASE_URL
           value: "{{ .Values.database.URL }}"
 {{ end }}
