@@ -18,7 +18,7 @@ service:
   port: 80
 
 persistence:
-  config:
+  data:
     hostPath: /path/on/host
     mountPath: /data
 

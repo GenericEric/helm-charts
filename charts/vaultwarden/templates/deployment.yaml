@@ -35,7 +35,7 @@ spec:
           value: "{{ .Values.env.PUID }}"
         - name: PGID
           value: "{{ .Values.env.PGID }}"
-{{ if .Values.database.enabled }}
+{{ if .Values.database.external.enabled }}
         - name: DATABASE_URL
           value: "{{ .Values.database.URL }}"
 {{ end }}
@@ -43,12 +43,12 @@ spec:
         - containerPort:  {{ .Values.service.port }}
           name:  {{ .Values.appName }}
         volumeMounts:
-        - name: config
-          mountPath: {{ .Values.persistence.config.mountPath }}
+        - name: data
+          mountPath: {{ .Values.persistence.data.mountPath }}
 {{ end }}
       volumes:
-        - name: config
+        - name: data
           hostPath:
-            path: {{ .Values.persistence.config.hostPath }}
+            path: {{ .Values.persistence.data.hostPath }}
 {{ end }}
       restartPolicy: Always
