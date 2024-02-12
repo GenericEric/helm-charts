@@ -38,8 +38,8 @@ spec:
         - name: PGID
           value: "{{ .Values.env.PGID }}"
         volumeMounts:
-        - name: data
-          mountPath: {{ .Values.persistence.data.mountPath }}
+        - name: config
+          mountPath: {{ .Values.persistence.config.mountPath }}
       volumes:
         - name: config
           hostPath:
