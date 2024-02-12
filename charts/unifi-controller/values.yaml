@@ -28,12 +28,6 @@ persistence:
     hostPath: /path/on/host
     mountPath: /config
 
-# If your password contains special characters, you will need to use percentage encoding.
-# https://en.wikipedia.org/wiki/Percent-encoding#Percent-encoding_reserved_characters
-database:
-  external: true
-  URL: postgresql://user_name:user_password@db_host:5432/vaultwarden
-
 resources:
   requests:
     cpu: 100m
