@@ -1,0 +1,43 @@
+appName: unifi-controller
+namespace: unifi-controller
+
+image:
+  repository: linuxserver/unifi-controller
+  tag: 7.3.83
+  imagePullPolicy: IfNotPresent
+
+env:
+  TZ: America/Chicago
+  MEM_LIMIT: 1024
+  PGID: 0
+  PUID: 0
+
+ingress:
+  host: unifi.example.com
+
+ports:
+  type: LoadBalancer
+  loadBalancerIP: 10.10.10.10
+  gui: 8443
+  device: 8080
+  stun: 3478
+  discovery: 10001
+
+persistence:
+  config:
+    hostPath: /path/on/host
+    mountPath: /config
+
+# If your password contains special characters, you will need to use percentage encoding.
+# https://en.wikipedia.org/wiki/Percent-encoding#Percent-encoding_reserved_characters
+database:
+  external: true
+  URL: postgresql://user_name:user_password@db_host:5432/vaultwarden
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 50Mi
+  limits:
+    cpu: 4000m
+    memory: 2000Mi
