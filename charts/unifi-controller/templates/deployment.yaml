@@ -43,5 +43,5 @@ spec:
       volumes:
         - name: config
           hostPath:
-            path: {{ .Values.persistence.data.hostPath }}
+            path: {{ .Values.persistence.config.hostPath }}
       restartPolicy: Always
