@@ -21,27 +21,6 @@ entries:
     urls:
     - https://github.com/GenericEric/helm-charts/releases/download/unifi-controller-0.0.4/unifi-controller-0.0.4.tgz
     version: 0.0.4
-  unifi-ontroller:
-  - apiVersion: v2
-    appVersion: 7.3.83
-    created: "2024-02-12T22:28:37.696317456Z"
-    description: The Unifi-network-application software is a powerful, enterprise
-      wireless software engine ideal for high-density client deployments requiring
-      low latency and high uptime performance.
-    digest: 148b68ae3109ddc4a40bbfcdd21b0769b93269c4b7192b217d2baec4ed427956
-    keywords:
-    - unifi
-    - wifi
-    - networking
-    maintainers:
-    - email: eric@bgeneric.net
-      name: GenericEric
-      url: https://bgeneric.net
-    name: unifi-ontroller
-    type: application
-    urls:
-    - https://github.com/GenericEric/helm-charts/releases/download/unifi-ontroller-0.0.3/unifi-ontroller-0.0.3.tgz
-    version: 0.0.3
   vaultwarden:
   - apiVersion: v2
     appVersion: 1.30.1
