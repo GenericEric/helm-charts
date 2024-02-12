@@ -5,7 +5,7 @@ Thank you for deploying your media factory with bgeneric charts!
 Port forward access method:
 
 Run this command:
-kubectl --namespace {{ .Values.namespace }} port-forward service/{{ .Values.appName }} 8888:{{ .Values.service.port }}
+kubectl --namespace {{ .Values.namespace }} port-forward service/{{ .Values.appName }} 8888:{{ .Values.ports.gui }}
 
 Then, in a browser, go to:
 http://localhost:8888
