@@ -3,7 +3,7 @@ namespace: unifi-controller
 
 image:
   repository: linuxserver/unifi-controller
-  tag: 7.3.83
+  tag: 8.0.28-ls28
   imagePullPolicy: IfNotPresent
 
 env:
