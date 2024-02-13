@@ -18,6 +18,7 @@ ingress:
 ports:
   type: LoadBalancer
   loadBalancerIP: 10.10.10.10
+  udpLoadBalancerIP: 10.10.10.11
   gui: 8443
   device: 8080
   stun: 3478

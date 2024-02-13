@@ -21,6 +21,25 @@ spec:
     protocol: TCP
     port: {{ .Values.ports.device }}
     targetPort: {{ .Values.ports.device }}
+  type: {{ .Values.ports.type }}
+  loadBalancerIP: {{ .Values.ports.loadBalancerIP }}
+  externalTrafficPolicy: Local
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.appName }}-udp
+  namespace: {{ .Values.namespace }}
+  labels:
+    app:  {{ .Values.appName }}
+spec:
+  selector:
+    app: {{ .Values.appName }}
+  sessionAffinity: None
+  sessionAffinityConfig:
+    clientIP:
+      timeoutSeconds: 10800
+  ports:
   - name: stun
     protocol: UDP
     port: {{ .Values.ports.stun }}
@@ -30,5 +49,5 @@ spec:
     port: {{ .Values.ports.discovery }}
     targetPort: {{ .Values.ports.discovery }}
   type: {{ .Values.ports.type }}
-  loadBalancerIP: {{ .Values.ports.loadBalancerIP }}
+  loadBalancerIP: {{ .Values.ports.udpLoadBalancerIP }}
   externalTrafficPolicy: Local
