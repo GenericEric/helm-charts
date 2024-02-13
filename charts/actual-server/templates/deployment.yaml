@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  {{ .Values.appName }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app:  {{ .Values.appName }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Values.appName }}
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app:  {{ .Values.appName }}
+    spec:
+      containers:
+      - name:  {{ .Values.appName }}
+        image:  "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        imagePullPolicy: {{ .Values.image.imagePullPolicy }}
+        resources:
+          requests:
+            cpu: {{ .Values.resources.requests.cpu }}
+            memory: {{ .Values.resources.requests.memory }}
+          limits:
+            cpu: {{ .Values.resources.limits.cpu }}
+            memory: {{ .Values.resources.limits.memory }}
+        env:
+        - name: TZ
+          value: "{{ .Values.env.TZ }}"
+        - name: ACTUAL_UPLOAD_FILE_SYNC_SIZE_LIMIT_MB
+          value: "{{ .Values.env.ACTUAL_UPLOAD_FILE_SYNC_SIZE_LIMIT_MB }}"
+        - name: ACTUAL_UPLOAD_SYNC_ENCRYPTED_FILE_SYNC_SIZE_LIMIT_MB
+          value: "{{ .Values.env.ACTUAL_UPLOAD_SYNC_ENCRYPTED_FILE_SYNC_SIZE_LIMIT_MB }}"
+        - name: ACTUAL_UPLOAD_FILE_SIZE_LIMIT_MB
+          value: "{{ .Values.env.ACTUAL_UPLOAD_FILE_SIZE_LIMIT_MB }}"
+        - name: ACTUAL_PORT
+          value: "{{ .Values.env.ACTUAL_PORT }}"
+        ports:
+        - containerPort:  {{ .Values.env.ACTUAL_PORT }}
+          name:  {{ .Values.appName }}
+        volumeMounts:
+        - name: data
+          mountPath: {{ .Values.persistence.data.mountPath }}
+      volumes:
+        - name: data
+          hostPath:
+            path: {{ .Values.persistence.data.hostPath }}
+      restartPolicy: Always
