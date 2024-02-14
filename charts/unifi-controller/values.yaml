@@ -2,8 +2,8 @@ appName: unifi-controller
 namespace: unifi-controller
 
 image:
-  repository: linuxserver/unifi-controller
-  tag: 8.0.28-ls28
+  repository: lumel/unifi-controller
+  tag: 8.0.28
   imagePullPolicy: IfNotPresent
 
 env:
@@ -18,7 +18,6 @@ ingress:
 ports:
   type: LoadBalancer
   loadBalancerIP: 10.10.10.10
-  udpLoadBalancerIP: 10.10.10.11
   gui: 8443
   device: 8080
   stun: 3478
@@ -27,7 +26,7 @@ ports:
 persistence:
   config:
     hostPath: /path/on/host
-    mountPath: /config
+    mountPath: /usr/lib/unifi/data
 
 resources:
   requests:
