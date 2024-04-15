@@ -1,0 +1,74 @@
+appName: lubelogger
+namespace: lubelogger
+
+image:
+  repository: hargata/lubelogger
+  tag: v1.3.0
+  imagePullPolicy: IfNotPresent
+
+env:
+  TZ: America/Chicago
+  LC_ALL: en_US.UTF-8
+  LANG: en_US.UTF-8
+  MailConfig__EmailServer: ""
+  MailConfig__EmailFrom: ""
+  MailConfig__UseSSL: "false"
+  MailConfig__Port: 587
+  MailConfig__Username: ""
+  MailConfig__Password: ""
+  POSTGRES_CONNECTION: "" # Host=<yourserveraddress:port>;Username=<yourusername>;Password=<yourpassword>;Database=<databasename>;
+  OpenIDConfig__Name: ""
+  OpenIDConfig__ClientId: ""
+  OpenIDConfig__ClientSecret: ""
+  OpenIDConfig__AuthURL: ""
+  OpenIDConfig__TokenURL: ""
+  OpenIDConfig__RedirectURL: https://<yourlubeloggerdomain.com>/Login/RemoteAuth
+  OpenIDConfig__Scope: email
+  OpenIDConfig__ValidateState: "false"
+  EnableAuth: "false"
+  UserNameHash: "" #SHA256 Hash of the root username.
+  UserPasswordHash: "" #SHA256 Hash of the root password.
+  LUBELOGGER_ALLOWED_FILE_EXTENSIONS: "*"
+  LUBELOGGER_LOGO_URL: ""
+  LUBELOGGER_MOTD: ""
+  LUBELOGGER_WEBHOOK: ""
+
+service:
+  port: 8080
+
+ingress:
+  host: lubelogger.example.com
+
+persistence:
+  config:
+    hostPath: /path/on/host
+    mountPath: /App/config
+  data:
+    hostPath: /path/on/host
+    mountPath: /App/data
+  translations:
+    hostPath: /path/on/host
+    mountPath: /App/wwwroot/translations
+  documents:
+    hostPath: /path/on/host
+    mountPath: /App/wwwroot/documents
+  images:
+    hostPath: /path/on/host
+    mountPath: /App/wwwroot/images
+  temp:
+    hostPath: /path/on/host
+    mountPath: /App/wwwroot/temp
+  log:
+    hostPath: /path/on/host
+    mountPath: /App/log
+  keys:
+    hostPath: /path/on/host
+    mountPath: /root/.aspnet/DataProtection-Keys
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 50Mi
+  limits:
+    cpu: 4000m
+    memory: 2000Mi

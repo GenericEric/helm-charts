@@ -1,0 +1,127 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  {{ .Values.appName }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app:  {{ .Values.appName }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Values.appName }}
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app:  {{ .Values.appName }}
+    spec:
+      containers:
+      - name:  {{ .Values.appName }}
+        image:  "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        imagePullPolicy: {{ .Values.image.imagePullPolicy }}
+        resources:
+          requests:
+            cpu: {{ .Values.resources.requests.cpu }}
+            memory: {{ .Values.resources.requests.memory }}
+          limits:
+            cpu: {{ .Values.resources.limits.cpu }}
+            memory: {{ .Values.resources.limits.memory }}
+        env:
+        - name: TZ
+          value: "{{ .Values.env.TZ }}"
+        - name: LC_ALL
+          value: "{{ .Values.env.LC_ALL }}"
+        - name: LANG
+          value: "{{ .Values.env.LANG }}"
+        - name: MailConfig__EmailServer
+          value: "{{ .Values.env.MailConfig__EmailServer }}"
+        - name: MailConfig__EmailFrom
+          value: "{{ .Values.env.MailConfig__EmailFrom }}"
+        - name: MailConfig__UseSSL
+          value: "{{ .Values.env.MailConfig__UseSSL }}"
+        - name: MailConfig__Port
+          value: "{{ .Values.env.MailConfig__Port }}"
+        - name: MailConfig__Username
+          value: "{{ .Values.env.MailConfig__Username }}"
+        - name: MailConfig__Password
+          value: "{{ .Values.env.MailConfig__Password }}"
+        - name: POSTGRES_CONNECTION
+          value: "{{ .Values.env.POSTGRES_CONNECTION }}"
+        - name: OpenIDConfig__Name
+          value: "{{ .Values.env.OpenIDConfig__Name }}"
+        - name: OpenIDConfig__ClientId
+          value: "{{ .Values.env.OpenIDConfig__ClientId }}"
+        - name: OpenIDConfig__ClientSecret
+          value: "{{ .Values.env.OpenIDConfig__ClientSecret }}"
+        - name: OpenIDConfig__AuthURL
+          value: "{{ .Values.env.OpenIDConfig__AuthURL }}"
+        - name: OpenIDConfig__TokenURL
+          value: "{{ .Values.env.OpenIDConfig__TokenURL }}"
+        - name: OpenIDConfig__RedirectURL
+          value: "{{ .Values.env.OpenIDConfig__RedirectURL }}"
+        - name: OpenIDConfig__Scope
+          value: "{{ .Values.env.OpenIDConfig__Scope }}"
+        - name: OpenIDConfig__ValidateState
+          value: "{{ .Values.env.OpenIDConfig__ValidateState }}"
+        - name: EnableAuth
+          value: "{{ .Values.env.EnableAuth }}"
+        - name: UserNameHash
+          value: "{{ .Values.env.UserNameHash }}"
+        - name: UserPasswordHash
+          value: "{{ .Values.env.UserPasswordHash }}"
+        - name: LUBELOGGER_ALLOWED_FILE_EXTENSIONS
+          value: "{{ .Values.env.LUBELOGGER_ALLOWED_FILE_EXTENSIONS }}"
+        - name: LUBELOGGER_LOGO_URL
+          value: "{{ .Values.env.LUBELOGGER_LOGO_URL }}"
+        - name: LUBELOGGER_MOTD
+          value: "{{ .Values.env.LUBELOGGER_MOTD }}"
+        - name: LUBELOGGER_WEBHOOK
+          value: "{{ .Values.env.LUBELOGGER_WEBHOOK }}"
+        ports:
+        - containerPort:  {{ .Values.service.port }}
+          name:  {{ .Values.appName }}
+        volumeMounts:
+        - name: config
+          mountPath: {{ .Values.persistence.config.mountPath }}
+        - name: data
+          mountPath: {{ .Values.persistence.data.mountPath }}
+        - name: translations
+          mountPath: {{ .Values.persistence.translations.mountPath }}
+        - name: documents
+          mountPath: {{ .Values.persistence.documents.mountPath }}
+        - name: images
+          mountPath: {{ .Values.persistence.images.mountPath }}
+        - name: temp
+          mountPath: {{ .Values.persistence.temp.mountPath }}
+        - name: log
+          mountPath: {{ .Values.persistence.log.mountPath }}
+        - name: keys
+          mountPath: {{ .Values.persistence.keys.mountPath }}
+      volumes:
+        - name: config
+          hostPath:
+            path: {{ .Values.persistence.config.hostPath }}
+        - name: data
+          hostPath:
+            path: {{ .Values.persistence.data.hostPath }}
+        - name: translations
+          hostPath:
+            path: {{ .Values.persistence.translations.hostPath }}
+        - name: documents
+          hostPath:
+            path: {{ .Values.persistence.documents.hostPath }}
+        - name: images
+          hostPath:
+            path: {{ .Values.persistence.images.hostPath }}
+        - name: temp
+          hostPath:
+            path: {{ .Values.persistence.temp.hostPath }}
+        - name: log
+          hostPath:
+            path: {{ .Values.persistence.log.hostPath }}
+        - name: keys
+          hostPath:
+            path: {{ .Values.persistence.keys.hostPath }}
+      restartPolicy: Always
