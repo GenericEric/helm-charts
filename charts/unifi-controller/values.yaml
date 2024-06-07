@@ -3,7 +3,7 @@ namespace: unifi-controller
 
 image:
   repository: lumel/unifi-controller
-  tag: 8.1.127
+  tag: 8.1.127@sha256:cfe214a739e63368a8c61f94ad2148348de6dcc9e1f78c942670a3b29cb1e955
   imagePullPolicy: IfNotPresent
 
 env:
