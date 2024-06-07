@@ -94,6 +94,26 @@ entries:
   lubelogger:
   - apiVersion: v2
     appVersion: 1.3.2
+    created: "2024-06-07T15:49:15.76811381Z"
+    description: Self-Hosted, Open-Source, Web-Based Vehicle Maintenance and Fuel
+      Mileage Tracker
+    digest: 36731e972d6dd98b51a600acacd9fd9d14f4cea1342fe36d9fbdf3588910a9fd
+    keywords:
+    - maintenance
+    - fuel
+    - vehicle
+    - milage
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: lubelogger
+    type: application
+    urls:
+    - https://github.com/GenericEric/helm-charts/releases/download/lubelogger-0.0.4/lubelogger-0.0.4.tgz
+    version: 0.0.4
+  - apiVersion: v2
+    appVersion: 1.3.2
     created: "2024-06-07T15:44:03.50164011Z"
     description: Self-Hosted, Open-Source, Web-Based Vehicle Maintenance and Fuel
       Mileage Tracker
@@ -556,4 +576,4 @@ entries:
     urls:
     - https://github.com/GenericEric/helm-charts/releases/download/vaultwarden-0.0.1/vaultwarden-0.0.1.tgz
     version: 0.0.1
-generated: "2024-06-07T15:48:34.439878504Z"
+generated: "2024-06-07T15:49:15.7681946Z"
