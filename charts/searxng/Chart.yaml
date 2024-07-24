@@ -3,7 +3,7 @@ name: searxng
 description: Privacy-respecting, hackable metasearch engine
 appVersion: "2024.7.20"
 type: application
-version: 0.0.3
+version: 0.0.4
 keywords:
   - search
   - privacy

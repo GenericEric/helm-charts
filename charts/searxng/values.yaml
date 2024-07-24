@@ -18,7 +18,7 @@ config:
       base_url: https://search.example.com
       port: 8888
       secret_key: "CHANGE_ME_TO_ULTRA_SECURE_STRING"
-      limiter: true
+      limiter: false
       image_proxy: true
     general:
       debug: false
@@ -28,7 +28,6 @@ config:
       autocomplete: "duckduckgo"
     ui:
       infinite_scroll: true
-      default_theme: dark
 
 service:
   port: 8888
