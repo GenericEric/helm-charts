@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  {{ .Values.appName }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app:  {{ .Values.appName }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Values.appName }}
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app:  {{ .Values.appName }}
+    spec:
+      containers:
+      - name:  {{ .Values.appName }}
+        image:  "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        imagePullPolicy: {{ .Values.image.imagePullPolicy }}
+        resources:
+          requests:
+            cpu: {{ .Values.resources.requests.cpu }}
+            memory: {{ .Values.resources.requests.memory }}
+          limits:
+            cpu: {{ .Values.resources.limits.cpu }}
+            memory: {{ .Values.resources.limits.memory }}
+        env:
+        - name: TZ
+          value: "{{ .Values.env.TZ }}"
+        - name: LC_ALL
+          value: "{{ .Values.env.LC_ALL }}"
+        - name: LANG
+          value: "{{ .Values.env.LANG }}"
+        ports:
+        - containerPort:  {{ .Values.service.port }}
+          name:  {{ .Values.appName }}
+        volumeMounts:
+          {{- if .Values.config.enabled }}
+          - mountPath: /etc/searxng/settings.yml
+            name: {{ .Values.appName }}-config
+            subPath: settings.yml
+            readOnly: true
+          {{ end }}
+      restartPolicy: Always
+      volumes:
+        {{- if .Values.config.enabled }}
+        - name: {{ .Values.appName }}-config
+          configMap:
+            name: {{ .Values.appName }}-config

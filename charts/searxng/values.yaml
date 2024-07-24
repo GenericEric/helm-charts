@@ -1,0 +1,45 @@
+appName: searxng
+namespace: searxng
+
+image:
+  repository: searxng/searxng
+  tag: 2024.7.20-657dcb973
+  imagePullPolicy: IfNotPresent
+
+env:
+  TZ: America/Chicago
+  LANG: en_US.UTF-8
+
+config:
+  enabled: true
+  data: |
+  use_default_settings: true
+  server:
+    base_url: https://search.example.com
+    port: 8888
+    secret_key: "CHANGE_ME_TO_ULTRA_SECURE_STRING"
+    limiter: true
+    image_proxy: true
+  general:
+    debug: false
+    instance_name: "SearXNG"
+  search:
+    safe_search: 2
+    autocomplete: "duckduckgo"
+  ui:
+    infinite_scroll: true
+    default_theme: dark
+
+service:
+  port: 8888
+
+ingress:
+  host: search.example.com
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 50Mi
+  limits:
+    cpu: 4000m
+    memory: 2000Mi

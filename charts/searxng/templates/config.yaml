@@ -1,0 +1,9 @@
+{{- if .Values.config.enabled -}}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.appName }}-config
+data:
+  settings.yml: |
+    {{- .Values.config.data | nindent 4 }}
+{{- end }}

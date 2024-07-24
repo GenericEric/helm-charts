@@ -1,0 +1,14 @@
+apiVersion: v2
+name: searxng
+description: Privacy-respecting, hackable metasearch engine
+appVersion: "2024.7.20"
+type: application
+version: 0.0.1
+keywords:
+  - search
+  - privacy
+  - engine
+maintainers:
+  - name: GenericEric
+    email: eric@bgeneric.net
+    url: https://bgeneric.net
