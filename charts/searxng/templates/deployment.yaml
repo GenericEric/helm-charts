@@ -45,9 +45,10 @@ spec:
             subPath: settings.yml
             readOnly: true
           {{ end }}
-      restartPolicy: Always
       volumes:
         {{- if .Values.config.enabled }}
         - name: {{ .Values.appName }}-config
           configMap:
             name: {{ .Values.appName }}-config
+      restartPolicy: Always
+        {{ end }}
