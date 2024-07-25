@@ -3,7 +3,7 @@ namespace: vaultwarden
 
 image:
   repository: vaultwarden/server
-  tag: 1.30.5@sha256:3d9d937b29281dc251ecae06e627b03d34a2c85d2ed876bf4d1ffe695836f864
+  tag: 1.31.0
   imagePullPolicy: IfNotPresent
 
 env:
