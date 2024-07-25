@@ -3,7 +3,7 @@ name: actual-server
 description: Actual is a local-first personal finance tool.
 appVersion: "24.5.0"
 type: application
-version: 0.0.5
+version: 0.0.6
 keywords:
   - actual
   - budget
