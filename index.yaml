@@ -286,6 +286,26 @@ entries:
   unifi-controller:
   - apiVersion: v2
     appVersion: 8.1.127
+    created: "2024-07-25T03:58:51.634133896Z"
+    description: The Unifi-network-application software is a powerful, enterprise
+      wireless software engine ideal for high-density client deployments requiring
+      low latency and high uptime performance.
+    digest: da3bb55d1f12959c265703997fd0f1b9bcf78f63b44591a899c8cd1667ebc7ad
+    keywords:
+    - unifi
+    - wifi
+    - networking
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: unifi-controller
+    type: application
+    urls:
+    - https://github.com/GenericEric/helm-charts/releases/download/unifi-controller-0.5.2/unifi-controller-0.5.2.tgz
+    version: 0.5.2
+  - apiVersion: v2
+    appVersion: 8.1.127
     created: "2024-06-07T15:46:03.203845793Z"
     description: The Unifi-network-application software is a powerful, enterprise
       wireless software engine ideal for high-density client deployments requiring
@@ -687,4 +707,4 @@ entries:
     urls:
     - https://github.com/GenericEric/helm-charts/releases/download/vaultwarden-0.0.1/vaultwarden-0.0.1.tgz
     version: 0.0.1
-generated: "2024-07-25T03:57:06.166193443Z"
+generated: "2024-07-25T03:58:51.634293114Z"
