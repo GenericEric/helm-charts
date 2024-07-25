@@ -3,7 +3,7 @@ name: lubelogger
 description: Self-Hosted, Open-Source, Web-Based Vehicle Maintenance and Fuel Mileage Tracker
 appVersion: "1.3.2"
 type: application
-version: 0.0.4
+version: 0.0.5
 keywords:
   - maintenance
   - fuel
