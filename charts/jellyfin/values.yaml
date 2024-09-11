@@ -1,0 +1,36 @@
+appName: jellyfin
+namespace: jellyfin
+
+image:
+  repository: linuxserver/jellyfin
+  tag: 10.9.11
+  imagePullPolicy: IfNotPresent
+
+env:
+  TZ: America/Chicago
+  LC_ALL: en_US.UTF-8
+  LANG: en_US.UTF-8
+  PUIG: 1000
+  PGID: 1000
+
+service:
+  port: 8096
+
+ingress:
+  host: jellyfin.example.com
+
+persistence:
+  config:
+    hostPath: /path/on/host
+    mountPath: /config
+  data:
+    mountPath: /data
+    existingClaim: nfs-media
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 50Mi
+  limits:
+    cpu: 4000m
+    memory: 2000Mi
