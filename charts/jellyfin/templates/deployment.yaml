@@ -53,6 +53,6 @@ spec:
           hostPath:
             path: {{ .Values.persistence.config.hostPath }}
         - name: data
-          hostPath:
-            path: {{ .Values.persistence.data.hostPath }}
+          persistentVolumeClaim:
+            claimName: {{ .Values.persistence.data.existingClaim }}
       restartPolicy: Always
