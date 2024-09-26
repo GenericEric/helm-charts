@@ -2,6 +2,24 @@ apiVersion: v1
 entries:
   actual-server:
   - apiVersion: v2
+    appVersion: 24.7.0
+    created: "2024-09-26T15:55:20.804935074Z"
+    description: Actual is a local-first personal finance tool.
+    digest: 6a8621a1ee685e3a459674097404946e6e7ed9a8a06d370c9e428740238dc296
+    keywords:
+    - actual
+    - budget
+    - finances
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: actual-server
+    type: application
+    urls:
+    - https://github.com/GenericEric/helm-charts/releases/download/actual-server-0.0.7/actual-server-0.0.7.tgz
+    version: 0.0.7
+  - apiVersion: v2
     appVersion: 24.5.0
     created: "2024-07-25T03:35:07.853025876Z"
     description: Actual is a local-first personal finance tool.
@@ -766,4 +784,4 @@ entries:
     urls:
     - https://github.com/GenericEric/helm-charts/releases/download/vaultwarden-0.0.1/vaultwarden-0.0.1.tgz
     version: 0.0.1
-generated: "2024-09-11T17:56:03.225514678Z"
+generated: "2024-09-26T15:55:20.805017137Z"
