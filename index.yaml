@@ -311,6 +311,24 @@ entries:
     version: 0.0.1
   searxng:
   - apiVersion: v2
+    appVersion: 2024.9.26
+    created: "2024-09-26T15:58:57.118095006Z"
+    description: Privacy-respecting, hackable metasearch engine
+    digest: 1f8fb374735eb388616fdf2a4be605f4de057d9c45069d187d0150e11fc455a9
+    keywords:
+    - search
+    - privacy
+    - engine
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: searxng
+    type: application
+    urls:
+    - https://github.com/GenericEric/helm-charts/releases/download/searxng-0.0.5/searxng-0.0.5.tgz
+    version: 0.0.5
+  - apiVersion: v2
     appVersion: 2024.7.20
     created: "2024-07-24T23:21:47.479676945Z"
     description: Privacy-respecting, hackable metasearch engine
@@ -824,4 +842,4 @@ entries:
     urls:
     - https://github.com/GenericEric/helm-charts/releases/download/vaultwarden-0.0.1/vaultwarden-0.0.1.tgz
     version: 0.0.1
-generated: "2024-09-26T15:57:10.242823789Z"
+generated: "2024-09-26T15:58:57.118212746Z"
