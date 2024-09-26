@@ -3,7 +3,7 @@ namespace: actual-server
 
 image:
   repository: actualbudget/actual-server
-  tag: 24.7.0
+  tag: 24.9.0
   imagePullPolicy: IfNotPresent
 
 env:
