@@ -3,7 +3,7 @@ namespace: lubelogger
 
 image:
   repository: hargata/lubelogger
-  tag: v1.3.8
+  tag: v1.3.9
   imagePullPolicy: IfNotPresent
 
 env:
