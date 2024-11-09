@@ -40,6 +40,8 @@ spec:
           value: "{{ .Values.env.PUIG }}"
         - name: PGID
           value: "{{ .Values.env.PGID }}"
+        - name: NVIDIA_VISIBLE_DEVICES
+          value: all
         ports:
         - containerPort:  {{ .Values.service.port }}
           name:  {{ .Values.appName }}
