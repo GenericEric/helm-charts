@@ -3,7 +3,7 @@ namespace: unifi-controller
 
 image:
   repository: lumel/unifi-controller
-  tag: 8.4.62
+  tag: 8.5.6
   imagePullPolicy: IfNotPresent
 
 env:
