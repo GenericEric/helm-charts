@@ -42,8 +42,6 @@ spec:
           value: "{{ .Values.env.PGID }}"
         - name: NVIDIA_VISIBLE_DEVICES
           value: all
-        - name: DOCKER_MODS
-          value: linuxserver/mods:jellyfin-opencl-intel
         ports:
         - containerPort:  {{ .Values.service.port }}
           name:  {{ .Values.appName }}
