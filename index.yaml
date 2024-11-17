@@ -148,6 +148,26 @@ entries:
   jellyfin:
   - apiVersion: v2
     appVersion: 10.10.2
+    created: "2024-11-17T14:05:24.536174682Z"
+    description: Jellyfin is a Free Software Media System that puts you in control
+      of managing and streaming your media.
+    digest: 6764cfaa67bcccddf57cbc305ea26268bbe6320fb210c75331622afdcdd1d1d6
+    keywords:
+    - media
+    - streaming
+    - tvshows
+    - movies
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: jellyfin
+    type: application
+    urls:
+    - https://github.com/GenericEric/helm-charts/releases/download/jellyfin-0.0.7/jellyfin-0.0.7.tgz
+    version: 0.0.7
+  - apiVersion: v2
+    appVersion: 10.10.2
     created: "2024-11-17T13:58:33.236968644Z"
     description: Jellyfin is a Free Software Media System that puts you in control
       of managing and streaming your media.
@@ -1034,4 +1054,4 @@ entries:
     urls:
     - https://github.com/GenericEric/helm-charts/releases/download/vaultwarden-0.0.1/vaultwarden-0.0.1.tgz
     version: 0.0.1
-generated: "2024-11-17T13:58:33.237087697Z"
+generated: "2024-11-17T14:05:24.53628115Z"
