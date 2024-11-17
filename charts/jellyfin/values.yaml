@@ -3,7 +3,7 @@ namespace: jellyfin
 
 image:
   repository: linuxserver/jellyfin
-  tag: 10.10.1
+  tag: 10.10.2
   imagePullPolicy: IfNotPresent
 
 env:
