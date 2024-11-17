@@ -10,7 +10,7 @@ env:
   TZ: America/Chicago
   LC_ALL: en_US.UTF-8
   LANG: en_US.UTF-8
-  PUIG: 1000
+  PUID: 1000
   PGID: 1000
 
 service:

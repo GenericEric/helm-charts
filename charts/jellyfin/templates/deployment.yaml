@@ -36,7 +36,7 @@ spec:
           value: "{{ .Values.env.LC_ALL }}"
         - name: LANG
           value: "{{ .Values.env.LANG }}"
-        - name: PUIG
+        - name: PUID
           value: "{{ .Values.env.PUIG }}"
         - name: PGID
           value: "{{ .Values.env.PGID }}"
