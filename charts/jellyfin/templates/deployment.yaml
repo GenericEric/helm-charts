@@ -37,7 +37,7 @@ spec:
         - name: LANG
           value: "{{ .Values.env.LANG }}"
         - name: PUID
-          value: "{{ .Values.env.PUIG }}"
+          value: "{{ .Values.env.PUID }}"
         - name: PGID
           value: "{{ .Values.env.PGID }}"
         - name: NVIDIA_VISIBLE_DEVICES
