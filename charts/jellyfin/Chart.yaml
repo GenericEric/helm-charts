@@ -3,7 +3,7 @@ name: jellyfin
 description: Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media.
 appVersion: "10.10.2"
 type: application
-version: 0.0.9
+version: 0.1.0
 keywords:
   - media
   - streaming
