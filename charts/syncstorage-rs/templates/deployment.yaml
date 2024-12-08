@@ -45,6 +45,8 @@ spec:
           value: "{{ .Values.env.SYNC_MASTER_SECRET }}"
         - name: SYNC_TOKENSERVER__RUN_MIGRATIONS
           value: "{{ .Values.env.SYNC_TOKENSERVER__RUN_MIGRATIONS }}"
+        - name: RUST_BACKTRACE
+          value: "{{ .Values.env.RUST_BACKTRACE }}"
         ports:
         - containerPort:  {{ .Values.service.port }}
           name:  {{ .Values.appName }}

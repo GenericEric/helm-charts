@@ -13,6 +13,7 @@ env:
   SYNC_HOST: 0.0.0.0
   SYNC_MASTER_SECRET: secret0
   SYNC_TOKENSERVER__RUN_MIGRATIONS: "true"
+  RUST_BACKTRACE: 1
 
 ingress:
   host: syncstorage-rs.example.com
