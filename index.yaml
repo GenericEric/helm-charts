@@ -639,6 +639,24 @@ entries:
   syncstorage-rs:
   - apiVersion: v2
     appVersion: 0.18.2
+    created: "2024-12-08T23:45:29.779428427Z"
+    description: Mozilla Sync Storage built with Rust.
+    digest: a2b72574f4c2b65e6b3bdc7969d853de3453346dbbe700f23837e1b0d747bc64
+    keywords:
+    - firefox
+    - syncstorage-rs
+    - browser
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: syncstorage-rs
+    type: application
+    urls:
+    - https://github.com/GenericEric/helm-charts/releases/download/syncstorage-rs-0.0.2/syncstorage-rs-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v2
+    appVersion: 0.18.2
     created: "2024-12-08T23:31:39.365488079Z"
     description: Mozilla Sync Storage built with Rust.
     digest: bf235bc7e4a507218429709c3bb432cd7db72cb2feeef7a839617a2846445b2b
@@ -1173,4 +1191,4 @@ entries:
     urls:
     - https://github.com/GenericEric/helm-charts/releases/download/vaultwarden-0.0.1/vaultwarden-0.0.1.tgz
     version: 0.0.1
-generated: "2024-12-08T23:31:39.365918658Z"
+generated: "2024-12-08T23:45:29.779584146Z"
