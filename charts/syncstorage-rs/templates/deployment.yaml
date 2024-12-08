@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  {{ .Values.appName }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app:  {{ .Values.appName }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Values.appName }}
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app:  {{ .Values.appName }}
+    spec:
+      containers:
+      - name:  {{ .Values.appName }}
+        image:  "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        imagePullPolicy: {{ .Values.image.imagePullPolicy }}
+        resources:
+          requests:
+            cpu: {{ .Values.resources.requests.cpu }}
+            memory: {{ .Values.resources.requests.memory }}
+          limits:
+            cpu: {{ .Values.resources.limits.cpu }}
+            memory: {{ .Values.resources.limits.memory }}
+        env:
+        - name: TZ
+          value: "{{ .Values.env.TZ }}"
+        - name: PUID
+          value: "{{ .Values.env.PUID }}"
+        - name: PGID
+          value: "{{ .Values.env.PGID }}"
+        - name: SYNC_SYNCSTORAGE__DATABASE_URL
+          value: "{{ .Values.database.SYNC_SYNCSTORAGE__DATABASE_URL }}"
+        - name: SYNC_TOKENSERVER__DATABASE_URL
+          value: "{{ .Values.database.SYNC_TOKENSERVER__DATABASE_URL }}"
+        - name: SYNC_HOST
+          value: "{{ .Values.env.SYNC_HOST }}"
+        - name: SYNC_MASTER_SECRET
+          value: "{{ .Values.env.SYNC_MASTER_SECRET }}"
+        - name: SYNC_TOKENSERVER__RUN_MIGRATIONS
+          value: "{{ .Values.env.SYNC_TOKENSERVER__RUN_MIGRATIONS }}"
+        ports:
+        - containerPort:  {{ .Values.service.port }}
+          name:  {{ .Values.appName }}
+      restartPolicy: Always

@@ -1,0 +1,33 @@
+appName: syncstorage-rs
+namespace: syncstorage-rs
+
+image:
+  repository: mozilla/syncstorage-rs
+  tag: 0.18.2
+  imagePullPolicy: IfNotPresent
+
+env:
+  TZ: America/Chicago
+  PGID: 568
+  PUID: 568
+  SYNC_HOST: 0.0.0.0
+  SYNC_MASTER_SECRET: secret0
+  SYNC_TOKENSERVER__RUN_MIGRATIONS: "true"
+
+ingress:
+  host: syncstorage-rs.example.com
+
+service:
+  port: 8000
+
+database:
+  SYNC_SYNCSTORAGE__DATABASE_URL: mysql://test:test@sync-db:3306/syncstorage
+  SYNC_TOKENSERVER__DATABASE_URL: mysql://test:test@tokenserver-db:3306/tokenserver
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 50Mi
+  limits:
+    cpu: 4000m
+    memory: 2000Mi
