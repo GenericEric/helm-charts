@@ -1,5 +1,5 @@
-appName: syncstorage-rs
-namespace: syncstorage-rs
+appName: syncstorage
+namespace: syncstorage
 
 image:
   repository: urmelausmall/syncstoragersdocker
