@@ -2,7 +2,7 @@ appName: syncstorage-rs
 namespace: syncstorage-rs
 
 image:
-  repository: mozilla/syncstorage-rs
+  repository: urmelausmall/syncstoragersdocker
   tag: 0.18.2
   imagePullPolicy: IfNotPresent
 
@@ -10,10 +10,12 @@ env:
   TZ: America/Chicago
   PGID: 568
   PUID: 568
-  SYNC_HOST: 0.0.0.0
-  SYNC_MASTER_SECRET: secret0
-  SYNC_TOKENSERVER__RUN_MIGRATIONS: "true"
-  RUST_BACKTRACE: 1
+  # Use: cat /dev/urandom | base32 | head -c64
+  SYNC_MASTER_SECRET: ""
+  # Use: cat /dev/urandom | base32 | head -c64
+  METRICS_HASH_SECRET: ""
+  SYNC_CAPACITY: 10
+  LOGLEVEL: 1
 
 ingress:
   host: syncstorage-rs.example.com
@@ -22,8 +24,8 @@ service:
   port: 8000
 
 database:
-  SYNC_SYNCSTORAGE__DATABASE_URL: mysql://test:test@sync-db:3306/syncstorage
-  SYNC_TOKENSERVER__DATABASE_URL: mysql://test:test@tokenserver-db:3306/tokenserver
+  SYNC_SYNCSTORAGE__DATABASE_URL: mysql://user:pw@127.0.0.1:3306/ff_syncstorage
+  SYNC_TOKENSERVER__DATABASE_URL: mysql://user:pw@127.0.0.1:3306/ff_tokenserver
 
 resources:
   requests:

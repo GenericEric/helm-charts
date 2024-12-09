@@ -39,14 +39,16 @@ spec:
           value: "{{ .Values.database.SYNC_SYNCSTORAGE__DATABASE_URL }}"
         - name: SYNC_TOKENSERVER__DATABASE_URL
           value: "{{ .Values.database.SYNC_TOKENSERVER__DATABASE_URL }}"
-        - name: SYNC_HOST
-          value: "{{ .Values.env.SYNC_HOST }}"
         - name: SYNC_MASTER_SECRET
           value: "{{ .Values.env.SYNC_MASTER_SECRET }}"
-        - name: SYNC_TOKENSERVER__RUN_MIGRATIONS
-          value: "{{ .Values.env.SYNC_TOKENSERVER__RUN_MIGRATIONS }}"
-        - name: RUST_BACKTRACE
-          value: "{{ .Values.env.RUST_BACKTRACE }}"
+        - name: METRICS_HASH_SECRET
+          value: "{{ .Values.env.METRICS_HASH_SECRET }}"
+        - name: SYNC_CAPACITY
+          value: "{{ .Values.env.SYNC_CAPACITY }}"
+        - name: SYNC_URL
+          value: "{{ .Values.ingress.host }}"
+        - name: LOGLEVEL
+          value: "{{ .Values.env.LOGLEVEL }}"
         ports:
         - containerPort:  {{ .Values.service.port }}
           name:  {{ .Values.appName }}
