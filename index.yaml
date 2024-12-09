@@ -636,6 +636,25 @@ entries:
     urls:
     - https://github.com/GenericEric/helm-charts/releases/download/searxng-0.0.1/searxng-0.0.1.tgz
     version: 0.0.1
+  syncstorage:
+  - apiVersion: v2
+    appVersion: 0.18.2
+    created: "2024-12-09T01:52:47.703030859Z"
+    description: Mozilla Sync Storage built with Rust.
+    digest: 3b8071b1c783ed67045bfbc3626bd5de35b9f84cbcd90729adb2bd5908b67b30
+    keywords:
+    - firefox
+    - syncstorage
+    - browser
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: syncstorage
+    type: application
+    urls:
+    - https://github.com/GenericEric/helm-charts/releases/download/syncstorage-0.0.1/syncstorage-0.0.1.tgz
+    version: 0.0.1
   syncstorage-rs:
   - apiVersion: v2
     appVersion: 0.18.2
@@ -1227,4 +1246,4 @@ entries:
     urls:
     - https://github.com/GenericEric/helm-charts/releases/download/vaultwarden-0.0.1/vaultwarden-0.0.1.tgz
     version: 0.0.1
-generated: "2024-12-09T01:22:36.989148412Z"
+generated: "2024-12-09T01:52:47.703099817Z"
