@@ -35,10 +35,10 @@ spec:
           value: "{{ .Values.env.PUID }}"
         - name: PGID
           value: "{{ .Values.env.PGID }}"
-        - name: SYNC_SYNCSTORAGE__DATABASE_URL
-          value: "{{ .Values.database.SYNC_SYNCSTORAGE__DATABASE_URL }}"
-        - name: SYNC_TOKENSERVER__DATABASE_URL
-          value: "{{ .Values.database.SYNC_TOKENSERVER__DATABASE_URL }}"
+        - name: SYNC_SYNCSTORAGE_DATABASE_URL
+          value: "{{ .Values.database.SYNC_SYNCSTORAGE_DATABASE_URL }}"
+        - name: SYNC_TOKENSERVER_DATABASE_URL
+          value: "{{ .Values.database.SYNC_TOKENSERVER_DATABASE_URL }}"
         - name: SYNC_MASTER_SECRET
           value: "{{ .Values.env.SYNC_MASTER_SECRET }}"
         - name: METRICS_HASH_SECRET
@@ -46,7 +46,7 @@ spec:
         - name: SYNC_CAPACITY
           value: "{{ .Values.env.SYNC_CAPACITY }}"
         - name: SYNC_URL
-          value: https://"{{ .Values.ingress.host }}"
+          value: "https://{{ .Values.ingress.host }}"
         - name: LOGLEVEL
           value: "{{ .Values.env.LOGLEVEL }}"
         ports:

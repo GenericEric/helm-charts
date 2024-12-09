@@ -24,8 +24,8 @@ service:
   port: 8000
 
 database:
-  SYNC_SYNCSTORAGE__DATABASE_URL: mysql://user:pw@127.0.0.1:3306/ff_syncstorage
-  SYNC_TOKENSERVER__DATABASE_URL: mysql://user:pw@127.0.0.1:3306/ff_tokenserver
+  SYNC_SYNCSTORAGE_DATABASE_URL: mysql://user:pw@127.0.0.1:3306/ff_syncstorage
+  SYNC_TOKENSERVER_DATABASE_URL: mysql://user:pw@127.0.0.1:3306/ff_tokenserver
 
 resources:
   requests:

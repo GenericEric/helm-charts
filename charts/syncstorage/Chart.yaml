@@ -3,7 +3,7 @@ name: syncstorage
 description: Mozilla Sync Storage built with Rust.
 appVersion: "0.18.2"
 type: application
-version: 0.0.2
+version: 0.0.3
 keywords:
   - firefox
   - syncstorage
