@@ -46,7 +46,7 @@ spec:
         - name: SYNC_CAPACITY
           value: "{{ .Values.env.SYNC_CAPACITY }}"
         - name: SYNC_URL
-          value: "{{ .Values.ingress.host }}"
+          value: https://"{{ .Values.ingress.host }}"
         - name: LOGLEVEL
           value: "{{ .Values.env.LOGLEVEL }}"
         ports:
