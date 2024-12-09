@@ -1,12 +1,12 @@
 apiVersion: v2
-name: syncstorage-rs
+name: syncstorage
 description: Mozilla Sync Storage built with Rust.
 appVersion: "0.18.2"
 type: application
-version: 0.0.4
+version: 0.0.1
 keywords:
   - firefox
-  - syncstorage-rs
+  - syncstorage
   - browser
 maintainers:
   - name: GenericEric
