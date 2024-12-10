@@ -2,6 +2,24 @@ apiVersion: v1
 entries:
   actual-server:
   - apiVersion: v2
+    appVersion: 24.12.0
+    created: "2024-12-10T05:23:44.346103763Z"
+    description: Actual is a local-first personal finance tool.
+    digest: d295f65608ebd583475f069eefce11a327f14d524c2460aaf37d5d92e0b8979b
+    keywords:
+    - actual
+    - budget
+    - finances
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: actual-server
+    type: application
+    urls:
+    - https://github.com/GenericEric/helm-charts/releases/download/actual-server-0.0.9/actual-server-0.0.9.tgz
+    version: 0.0.9
+  - apiVersion: v2
     appVersion: 24.11.0
     created: "2024-11-09T13:29:15.83982566Z"
     description: Actual is a local-first personal finance tool.
@@ -146,6 +164,26 @@ entries:
     - https://github.com/GenericEric/helm-charts/releases/download/actual-server-0.0.1/actual-server-0.0.1.tgz
     version: 0.0.1
   jellyfin:
+  - apiVersion: v2
+    appVersion: 10.10.3
+    created: "2024-12-10T05:23:44.436084821Z"
+    description: Jellyfin is a Free Software Media System that puts you in control
+      of managing and streaming your media.
+    digest: 372eba40b1c78cf803221cf93e0ec5cf66ae73497698e6665b6813d17b4d3718
+    keywords:
+    - media
+    - streaming
+    - tvshows
+    - movies
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: jellyfin
+    type: application
+    urls:
+    - https://github.com/GenericEric/helm-charts/releases/download/jellyfin-0.1.3/jellyfin-0.1.3.tgz
+    version: 0.1.3
   - apiVersion: v2
     appVersion: 10.10.2
     created: "2024-11-17T15:22:45.086336624Z"
@@ -1282,4 +1320,4 @@ entries:
     urls:
     - https://github.com/GenericEric/helm-charts/releases/download/vaultwarden-0.0.1/vaultwarden-0.0.1.tgz
     version: 0.0.1
-generated: "2024-12-09T02:20:17.847009922Z"
+generated: "2024-12-10T05:23:44.436228448Z"
