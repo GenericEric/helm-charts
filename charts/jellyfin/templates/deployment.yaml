@@ -52,6 +52,53 @@ spec:
           mountPath: {{ .Values.persistence.config.mountPath }}
         - name: data
           mountPath: {{ .Values.persistence.data.mountPath }}
+{{ if .Values.watchedSync.enabled }}
+      - name: watched-sync
+        image:  "{{ .Values.watchedSync.image.repository }}:{{ .Values.watchedSync.image.tag }}"
+        imagePullPolicy: {{ .Values.watchedSync.image.imagePullPolicy }}
+        resources:
+          requests:
+            cpu: {{ .Values.watchedSync.resources.requests.cpu }}
+            memory: {{ .Values.watchedSync.resources.requests.memory }}
+          limits:
+            cpu: {{ .Values.watchedSync.resources.limits.cpu }}
+            memory: {{ .Values.watchedSync.resources.limits.memory }}
+        env:
+        - name: TZ
+          value: "{{ .Values.env.TZ }}"
+        - name: LC_ALL
+          value: "{{ .Values.env.LC_ALL }}"
+        - name: LANG
+          value: "{{ .Values.env.LANG }}"
+        - name: PUID
+          value: "{{ .Values.env.PUID }}"
+        - name: PGID
+          value: "{{ .Values.env.PGID }}"
+        - name: DRYRUN
+          value: "{{ .Values.watchedSync.env.DRYRUN }}"
+        - name: RUN_ONLY_ONCE
+          value: "{{ .Values.watchedSync.env.RUN_ONLY_ONCE }}"
+        - name: SLEEP_DURATION
+          value: "{{ .Values.watchedSync.env.SLEEP_DURATION }}"
+        - name: REQUEST_TIMEOUT
+          value: "{{ .Values.watchedSync.env.REQUEST_TIMEOUT }}"
+        - name: GENERATE_GUIDS
+          value: "{{ .Values.watchedSync.env.GENERATE_GUIDS }}"
+        - name: GENERATE_LOCATIONS
+          value: "{{ .Values.watchedSync.env.GENERATE_LOCATIONS }}"
+        - name: MAX_THREADS
+          value: "{{ .Values.watchedSync.env.MAX_THREADS }}"
+        - name: WHITELIST_USERS
+          value: "{{ .Values.watchedSync.env.WHITELIST_USERS }}"
+        - name: JELLYFIN_BASEURL
+          value: "{{ .Values.watchedSync.env.JELLYFIN_BASEURL }}"
+        - name: JELLYFIN_TOKEN
+          value: "{{ .Values.watchedSync.env.JELLYFIN_TOKEN }}"
+        - name: SYNC_FROM_JELLYFIN_TO_JELLYFIN
+          value: "{{ .Values.watchedSync.env.SYNC_FROM_JELLYFIN_TO_JELLYFIN }}"
+        - name: SSL_BYPASS
+          value: "{{ .Values.watchedSync.env.SSL_BYPASS }}"
+{{ end }}
       volumes:
         - name: config
           hostPath:

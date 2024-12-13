@@ -34,3 +34,33 @@ resources:
   limits:
     cpu: 4000m
     memory: 2000Mi
+
+watchedSync:
+  enabled: false
+  image:
+    repository: luigi311/jellyplex-watched
+    tag: 6.1
+    imagePullPolicy: IfNotPresent
+
+  env:
+    DRYRUN: "True"
+    RUN_ONLY_ONCE: "False"
+    SLEEP_DURATION: "3600"
+    REQUEST_TIMEOUT: 300
+    GENERATE_GUIDS: "True"
+    GENERATE_LOCATIONS: "True"
+    MAX_THREADS: 2
+    WHITELIST_USERS: "testuser1,testuser2"
+    JELLYFIN_BASEURL: "http://localhost:8096, http://nas:8096"
+    JELLYFIN_TOKEN: "SuperSecretToken, SuperSecretToken2"
+    SYNC_FROM_JELLYFIN_TO_JELLYFIN: "True"
+    SSL_BYPASS: "False"
+
+  resources:
+    requests:
+      cpu: 100m
+      memory: 50Mi
+    limits:
+      cpu: 4000m
+      memory: 2000Mi
+  
