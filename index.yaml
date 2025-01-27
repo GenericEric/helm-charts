@@ -444,6 +444,18 @@ entries:
     urls:
     - https://github.com/GenericEric/helm-charts/releases/download/jellyfin-0.0.1/jellyfin-0.0.1.tgz
     version: 0.0.1
+  jellyfin-test:
+  - apiVersion: v2
+    appVersion: 10.10.3
+    created: "2025-01-27T16:55:28.425185453Z"
+    description: Jellyfin is a Free Software Media System that puts you in control
+      of managing and streaming your media.
+    digest: 4ea5ed3e1c4e173aeaf47b2772238f67122e2ce5a3bc92bb5e413d06c4004afb
+    name: jellyfin-test
+    type: application
+    urls:
+    - https://github.com/GenericEric/helm-charts/releases/download/jellyfin-test-0.0.1/jellyfin-test-0.0.1.tgz
+    version: 0.0.1
   lubelogger:
   - apiVersion: v2
     appVersion: 1.4.1
@@ -1416,4 +1428,4 @@ entries:
     urls:
     - https://github.com/GenericEric/helm-charts/releases/download/vaultwarden-0.0.1/vaultwarden-0.0.1.tgz
     version: 0.0.1
-generated: "2024-12-13T05:21:18.301500767Z"
+generated: "2025-01-27T16:55:28.425360016Z"
