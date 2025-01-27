@@ -1,6 +1,0 @@
-apiVersion: v2
-name: jellyfin-test
-description: Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media.
-appVersion: "10.10.3"
-type: application
-version: 0.0.1
