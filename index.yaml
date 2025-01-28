@@ -872,6 +872,17 @@ entries:
     urls:
     - https://github.com/GenericEric/helm-charts/releases/download/syncstorage-rs-0.0.1/syncstorage-rs-0.0.1.tgz
     version: 0.0.1
+  test-chart:
+  - apiVersion: v2
+    appVersion: "1"
+    created: "2025-01-28T01:19:52.992413017Z"
+    description: A chart that shouldn't be used
+    digest: a288cc6ee68ffd972ab92570566a2ee0864a587ce5ebc89a3af7e6c0f484b8a2
+    name: test-chart
+    type: application
+    urls:
+    - https://github.com/GenericEric/helm-charts/releases/download/test-chart-0.0.2/test-chart-0.0.2.tgz
+    version: 0.0.2
   unifi-controller:
   - apiVersion: v2
     appVersion: 8.6.9
@@ -1428,4 +1439,4 @@ entries:
     urls:
     - https://github.com/GenericEric/helm-charts/releases/download/vaultwarden-0.0.1/vaultwarden-0.0.1.tgz
     version: 0.0.1
-generated: "2025-01-27T16:55:28.425360016Z"
+generated: "2025-01-28T01:19:52.992575761Z"
