@@ -875,6 +875,16 @@ entries:
   test-chart:
   - apiVersion: v2
     appVersion: "1"
+    created: "2025-01-28T01:38:26.956607852Z"
+    description: A chart that shouldn't be used
+    digest: ea413864c94026f9dbda4e6d9be4aebe4c3cbe623a8c049358b8b70ed9d5c82f
+    name: test-chart
+    type: application
+    urls:
+    - https://github.com/GenericEric/helm-charts/releases/download/test-chart-0.0.3/test-chart-0.0.3.tgz
+    version: 0.0.3
+  - apiVersion: v2
+    appVersion: "1"
     created: "2025-01-28T01:19:52.992413017Z"
     description: A chart that shouldn't be used
     digest: a288cc6ee68ffd972ab92570566a2ee0864a587ce5ebc89a3af7e6c0f484b8a2
@@ -1439,4 +1449,4 @@ entries:
     urls:
     - https://github.com/GenericEric/helm-charts/releases/download/vaultwarden-0.0.1/vaultwarden-0.0.1.tgz
     version: 0.0.1
-generated: "2025-01-28T01:19:52.992575761Z"
+generated: "2025-01-28T01:38:26.956808004Z"
