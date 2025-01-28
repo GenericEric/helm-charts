@@ -15,4 +15,4 @@ spec:
               service:
                 name: {{ .Values.appName }}
                 port:
-                  number: {{ .Values.env.ACTUAL_PORT }}
+                  number: {{ .Values.service.port }}

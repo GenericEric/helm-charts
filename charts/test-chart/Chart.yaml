@@ -3,4 +3,4 @@ name: test-chart
 description: A chart that shouldn't be used
 appVersion: "1"
 type: application
-version: 0.0.2
+version: 0.0.3
