@@ -1,0 +1,14 @@
+apiVersion: v2
+name: actual-server
+description: Actual is a local-first personal finance tool.
+appVersion: "24.12.0"
+type: application
+version: 0.0.9
+keywords:
+  - actual
+  - budget
+  - finances
+maintainers:
+  - name: GenericEric
+    email: eric@bgeneric.net
+    url: https://bgeneric.net

@@ -1,0 +1,36 @@
+appName: test-chart
+namespace: test-chart
+
+image:
+  repository: test/test
+  tag: 1
+  imagePullPolicy: IfNotPresent
+
+env:
+  TZ: America/Chicago
+  LC_ALL: en_US.UTF-8
+  LANG: en_US.UTF-8
+  PUID: 1000
+  PGID: 1000
+  custom:
+    name: ""
+    value: ""
+
+service:
+  port: 80
+
+ingress:
+  host: test.example.com
+
+persistence:
+  data:
+    hostPath: /path/on/host
+    mountPath: /data
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 50Mi
+  limits:
+    cpu: 4000m
+    memory: 2000Mi
