@@ -3,7 +3,7 @@ namespace: searxng
 
 image:
   repository: searxng/searxng
-  tag: 2024.12.1-0245e82bd
+  tag: 2025.3.11-3fe602a46
   imagePullPolicy: IfNotPresent
 
 env:
