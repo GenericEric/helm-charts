@@ -1,9 +1,9 @@
 apiVersion: v2
 name: actual-server
 description: Actual is a local-first personal finance tool.
-appVersion: "24.12.0"
+appVersion: "25.3.1"
 type: application
-version: 0.0.9
+version: 0.1.0
 keywords:
   - actual
   - budget
