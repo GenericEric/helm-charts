@@ -1,9 +1,9 @@
 apiVersion: v2
 name: unifi-controller
 description: The Unifi-network-application software is a powerful, enterprise wireless software engine ideal for high-density client deployments requiring low latency and high uptime performance.
-appVersion: "8.6.9"
+appVersion: "9.0.114"
 type: application
-version: 0.5.5
+version: 0.5.6
 keywords:
   - unifi
   - wifi
