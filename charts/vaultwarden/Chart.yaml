@@ -1,9 +1,9 @@
 apiVersion: v2
 name: vaultwarden
 description: Unofficial Bitwarden compatible server written in Rust.
-appVersion: "1.32.5"
+appVersion: "1.33.2"
 type: application
-version: 0.3.5
+version: 0.3.6
 keywords:
   - vaultwarden
   - passwords

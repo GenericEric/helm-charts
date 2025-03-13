@@ -3,7 +3,7 @@ namespace: vaultwarden
 
 image:
   repository: vaultwarden/server
-  tag: 1.32.5
+  tag: 1.33.2
   imagePullPolicy: IfNotPresent
 
 env:
