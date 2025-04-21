@@ -1,0 +1,14 @@
+apiVersion: v2
+name: tandoor
+description: Application for managing recipes, planning meals, building shopping lists and much much more!
+appVersion: "1.5.34"
+type: application
+version: 0.0.1
+keywords:
+  - recipes
+  - meals
+  - shopping
+maintainers:
+  - name: GenericEric
+    email: eric@bgeneric.net
+    url: https://bgeneric.net

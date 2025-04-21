@@ -1,0 +1,77 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  {{ .Values.appName }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app:  {{ .Values.appName }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Values.appName }}
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app:  {{ .Values.appName }}
+    spec:
+      containers:
+      - name:  {{ .Values.appName }}
+        image:  "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        imagePullPolicy: {{ .Values.image.imagePullPolicy }}
+        resources:
+          requests:
+            cpu: {{ .Values.resources.requests.cpu }}
+            memory: {{ .Values.resources.requests.memory }}
+          limits:
+            cpu: {{ .Values.resources.limits.cpu }}
+            memory: {{ .Values.resources.limits.memory }}
+        env:
+        - name: TZ
+          value: "{{ .Values.env.TZ }}"
+        - name: SECRET_KEY
+          value: "{{ .Values.env.SECRET_KEY }}"
+        - name: DB_ENGINE
+          value: "{{ .Values.env.DB_ENGINE }}"
+        - name: POSTGRES_HOST
+          value: "{{ .Values.env.POSTGRES_HOST }}"
+        - name: POSTGRES_PORT
+          value: "{{ .Values.env.POSTGRES_PORT }}"
+        - name: POSTGRES_USER
+          value: "{{ .Values.env.POSTGRES_USER }}"
+        - name: POSTGRES_PASSWORD
+          value: "{{ .Values.env.POSTGRES_PASSWORD }}"
+        - name: POSTGRES_DB
+          value: "{{ .Values.env.POSTGRES_DB }}"
+        - name: ALLOWED_HOSTS
+          value: "{{ .Values.ingress.host }}"
+        - name: DB_OPTIONS
+          value: "{{ .Values.env.DB_OPTIONS }}"
+        - name: SOCIAL_PROVIDERS
+          value: "{{ .Values.env.SOCIAL_PROVIDERS }}"
+        - name: SOCIALACCOUNT_PROVIDERS
+          value: "{{ .Values.env.SOCIALACCOUNT_PROVIDERS }}"
+        - name: ENABLE_PDF_EXPORT
+          value: "{{ .Values.env.ENABLE_PDF_EXPORT }}"
+        - name: SOCIAL_DEFAULT_ACCESS
+          value: "{{ .Values.env.SOCIAL_DEFAULT_ACCESS }}"
+        - name: SOCIAL_DEFAULT_GROUP
+          value: "{{ .Values.env.SOCIAL_DEFAULT_GROUP }}"
+        - name: ENABLE_SIGNUP
+          value: "{{ .Values.env.ENABLE_SIGNUP }}"
+        - name: S3_ACCESS_KEY
+          value: "{{ .Values.env.S3_ACCESS_KEY }}"
+        - name: S3_SECRET_ACCESS_KEY
+          value: "{{ .Values.env.S3_SECRET_ACCESS_KEY }}"
+        - name: S3_BUCKET_NAME
+          value: "{{ .Values.env.S3_BUCKET_NAME }}"
+        - name: S3_REGION_NAME
+          value: "{{ .Values.env.S3_REGION_NAME }}"
+        - name: FDC_API_KEY
+          value: "{{ .Values.env.FDC_API_KEY }}"
+        ports:
+        - containerPort:  {{ .Values.service.port }}
+          name:  {{ .Values.appName }}
+      restartPolicy: Always

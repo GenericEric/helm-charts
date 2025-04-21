@@ -1,0 +1,44 @@
+appName: tandoor
+namespace: tandoor
+
+image:
+  repository: vabene1111/recipes
+  tag: 1.5.34
+  imagePullPolicy: IfNotPresent
+
+env:
+  TZ: America/Chicago
+  SECRET_KEY:  ## random secret key, use for example `base64 /dev/urandom | head -c50` to generate one
+  DB_ENGINE: django.db.backends.postgresql
+  POSTGRES_HOST: ""
+  POSTGRES_PORT: 5432
+  POSTGRES_USER: ""
+  POSTGRES_PASSWORD: ""
+  POSTGRES_DB: ""
+  DB_OPTIONS: {"sslmode":"require"}
+  SOCIAL_PROVIDERS: allauth.socialaccount.providers.openid_connect
+  SOCIALACCOUNT_PROVIDERS: '{"openid_connect":{"APPS":[{"provider_id":"keycloak","name":"Keycloak","client_id":"KEYCLOAK_CLIENT_ID","secret":"KEYCLOAK_CLIENT_SECRET","settings":{"server_url":"https://auth.example.org/realms/KEYCLOAK_REALM/.well-known/openid-configuration"}}]}}'
+  ENABLE_PDF_EXPORT: 1
+  SOCIAL_DEFAULT_ACCESS: 1
+  SOCIAL_DEFAULT_GROUP: user ## guest, user, admin
+  ENABLE_SIGNUP: 0
+  S3_ACCESS_KEY: ""
+  S3_SECRET_ACCESS_KEY: ""
+  S3_BUCKET_NAME: ""
+  S3_REGION_NAME: ""
+  FDC_API_KEY: DEMO_KEY
+
+service:
+  port: 8080
+
+ingress:
+  host: recipes.example.com
+  class: nginx
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 50Mi
+  limits:
+    cpu: 4000m
+    memory: 2000Mi
