@@ -951,6 +951,26 @@ entries:
   tandoor:
   - apiVersion: v2
     appVersion: 1.5.34
+    created: "2025-04-21T19:06:29.299692687Z"
+    description: Application for managing recipes, planning meals, building shopping
+      lists and much much more!
+    digest: 47c46e83d56de0b007034e14739905e67a35100de3f276e37ccb3c8bf9299f10
+    icon: https://github.com/vabene1111/recipes/raw/develop/docs/logo_color.svg
+    keywords:
+    - recipes
+    - meals
+    - shopping
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: tandoor
+    type: application
+    urls:
+    - https://github.com/GenericEric/helm-charts/releases/download/tandoor-0.0.3/tandoor-0.0.3.tgz
+    version: 0.0.3
+  - apiVersion: v2
+    appVersion: 1.5.34
     created: "2025-04-21T18:26:46.568544305Z"
     description: Application for managing recipes, planning meals, building shopping
       lists and much much more!
@@ -1603,4 +1623,4 @@ entries:
     urls:
     - https://github.com/GenericEric/helm-charts/releases/download/vaultwarden-0.0.1/vaultwarden-0.0.1.tgz
     version: 0.0.1
-generated: "2025-04-21T18:26:46.568739171Z"
+generated: "2025-04-21T19:06:29.299894076Z"
