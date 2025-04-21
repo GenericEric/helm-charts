@@ -17,7 +17,7 @@ env:
   POSTGRES_DB: ""
   DB_OPTIONS: {"sslmode":"require"}
   SOCIAL_PROVIDERS: allauth.socialaccount.providers.openid_connect
-  SOCIALACCOUNT_PROVIDERS: '{"openid_connect":{"APPS":[{"provider_id":"keycloak","name":"Keycloak","client_id":"KEYCLOAK_CLIENT_ID","secret":"KEYCLOAK_CLIENT_SECRET","settings":{"server_url":"https://auth.example.org/realms/KEYCLOAK_REALM/.well-known/openid-configuration"}}]}}'
+  SOCIALACCOUNT_PROVIDERS: ## '{"openid_connect":{"APPS":[{"provider_id":"keycloak","name":"Keycloak","client_id":"KEYCLOAK_CLIENT_ID","secret":"KEYCLOAK_CLIENT_SECRET","settings":{"server_url":"https://auth.example.org/realms/KEYCLOAK_REALM/.well-known/openid-configuration"}}]}}'
   ENABLE_PDF_EXPORT: 1
   SOCIAL_DEFAULT_ACCESS: 1
   SOCIAL_DEFAULT_GROUP: user ## guest, user, admin
