@@ -46,7 +46,7 @@ spec:
         - name: POSTGRES_DB
           value: {{ .Values.env.POSTGRES_DB }}
         - name: ALLOWED_HOSTS
-          value: {{ .Values.ingress.host }}
+          value: {{ .Values.env.ALLOWED_HOSTS }}
         - name: DB_OPTIONS
           value: {{ .Values.env.DB_OPTIONS }}
         - name: SOCIAL_PROVIDERS

@@ -27,6 +27,7 @@ env:
   S3_BUCKET_NAME: ""
   S3_REGION_NAME: ""
   FDC_API_KEY: DEMO_KEY
+  ALLOWED_HOSTS: "*"
 
 service:
   port: 8080
