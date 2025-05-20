@@ -1,9 +1,9 @@
 apiVersion: v2
 name: searxng
 description: Privacy-respecting, hackable metasearch engine
-appVersion: "2025.03.11"
+appVersion: "2025.05.18"
 type: application
-version: 0.0.8
+version: 0.0.9
 keywords:
   - search
   - privacy
