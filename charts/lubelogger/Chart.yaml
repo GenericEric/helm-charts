@@ -1,9 +1,9 @@
 apiVersion: v2
 name: lubelogger
 description: Self-Hosted, Open-Source, Web-Based Vehicle Maintenance and Fuel Mileage Tracker
-appVersion: "1.4.7"
+appVersion: "1.4.9"
 type: application
-version: 0.1.0
+version: 0.1.1
 keywords:
   - maintenance
   - fuel
