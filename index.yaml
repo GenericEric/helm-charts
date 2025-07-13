@@ -2,6 +2,24 @@ apiVersion: v1
 entries:
   actual-server:
   - apiVersion: v2
+    appVersion: 25.7.1
+    created: "2025-07-13T15:14:19.709405551Z"
+    description: Actual is a local-first personal finance tool.
+    digest: a69926de7bb3f5471dff2fbc1b3788ad1bc19633eb7d2282a7c760b489b69efb
+    keywords:
+    - actual
+    - budget
+    - finances
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: actual-server
+    type: application
+    urls:
+    - https://github.com/GenericEric/helm-charts/releases/download/actual-server-0.1.3/actual-server-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
     appVersion: 25.6.1
     created: "2025-06-12T13:26:01.790423449Z"
     description: Actual is a local-first personal finance tool.
@@ -218,6 +236,26 @@ entries:
     - https://github.com/GenericEric/helm-charts/releases/download/actual-server-0.0.1/actual-server-0.0.1.tgz
     version: 0.0.1
   jellyfin:
+  - apiVersion: v2
+    appVersion: 10.10.7
+    created: "2025-07-13T15:14:19.888747086Z"
+    description: Jellyfin is a Free Software Media System that puts you in control
+      of managing and streaming your media.
+    digest: a7ce85f99c01563a1bf4995ee372e3be6afd75141377275a6e32792a59e5edef
+    keywords:
+    - media
+    - streaming
+    - tvshows
+    - movies
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: jellyfin
+    type: application
+    urls:
+    - https://github.com/GenericEric/helm-charts/releases/download/jellyfin-0.1.8/jellyfin-0.1.8.tgz
+    version: 0.1.8
   - apiVersion: v2
     appVersion: 10.10.7
     created: "2025-06-12T13:26:01.914298011Z"
@@ -572,6 +610,26 @@ entries:
     version: 0.0.1
   lubelogger:
   - apiVersion: v2
+    appVersion: 1.4.9
+    created: "2025-07-13T15:14:20.06118665Z"
+    description: Self-Hosted, Open-Source, Web-Based Vehicle Maintenance and Fuel
+      Mileage Tracker
+    digest: e95fd8c81f632535adaa52dd81c7fe960d7cde529f1c7cb76dd171fff0959a3d
+    keywords:
+    - maintenance
+    - fuel
+    - vehicle
+    - milage
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: lubelogger
+    type: application
+    urls:
+    - https://github.com/GenericEric/helm-charts/releases/download/lubelogger-0.1.1/lubelogger-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
     appVersion: 1.4.7
     created: "2025-05-20T06:57:20.791067547Z"
     description: Self-Hosted, Open-Source, Web-Based Vehicle Maintenance and Fuel
@@ -772,6 +830,24 @@ entries:
     - https://github.com/GenericEric/helm-charts/releases/download/lubelogger-0.0.1/lubelogger-0.0.1.tgz
     version: 0.0.1
   searxng:
+  - apiVersion: v2
+    appVersion: 2025.07.11
+    created: "2025-07-13T15:14:20.235681869Z"
+    description: Privacy-respecting, hackable metasearch engine
+    digest: 23cd4005163a540c5d756774ab8d8e0712dd1e29a532ca248523b163c1941ed9
+    keywords:
+    - search
+    - privacy
+    - engine
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: searxng
+    type: application
+    urls:
+    - https://github.com/GenericEric/helm-charts/releases/download/searxng-0.1.1/searxng-0.1.1.tgz
+    version: 0.1.1
   - apiVersion: v2
     appVersion: 2025.06.12
     created: "2025-06-12T13:26:02.059823186Z"
@@ -1182,6 +1258,26 @@ entries:
     - https://github.com/GenericEric/helm-charts/releases/download/test-chart-0.0.2/test-chart-0.0.2.tgz
     version: 0.0.2
   unifi-controller:
+  - apiVersion: v2
+    appVersion: 9.2.87
+    created: "2025-07-13T15:14:20.40603946Z"
+    description: The Unifi-network-application software is a powerful, enterprise
+      wireless software engine ideal for high-density client deployments requiring
+      low latency and high uptime performance.
+    digest: 1743d5b8fa491dc7afd181dc44c4d6674015e45fa76d1db1275103bce0625061
+    keywords:
+    - unifi
+    - wifi
+    - networking
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: unifi-controller
+    type: application
+    urls:
+    - https://github.com/GenericEric/helm-charts/releases/download/unifi-controller-0.5.8/unifi-controller-0.5.8.tgz
+    version: 0.5.8
   - apiVersion: v2
     appVersion: 9.1.120
     created: "2025-05-20T06:57:21.00235604Z"
@@ -1813,4 +1909,4 @@ entries:
     urls:
     - https://github.com/GenericEric/helm-charts/releases/download/vaultwarden-0.0.1/vaultwarden-0.0.1.tgz
     version: 0.0.1
-generated: "2025-06-12T13:26:02.193525023Z"
+generated: "2025-07-13T15:14:20.406549238Z"
