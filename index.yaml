@@ -2,6 +2,24 @@ apiVersion: v1
 entries:
   actual-server:
   - apiVersion: v2
+    appVersion: 25.8.0
+    created: "2025-08-07T17:57:18.98035217Z"
+    description: Actual is a local-first personal finance tool.
+    digest: 48db9eb349feb964ecfca4509cf33a3abadeb6c8e57576fb9c2e2e5e2369362d
+    keywords:
+    - actual
+    - budget
+    - finances
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: actual-server
+    type: application
+    urls:
+    - https://github.com/GenericEric/helm-charts/releases/download/actual-server-0.1.4/actual-server-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
     appVersion: 25.7.1
     created: "2025-07-13T15:14:19.709405551Z"
     description: Actual is a local-first personal finance tool.
@@ -236,6 +254,26 @@ entries:
     - https://github.com/GenericEric/helm-charts/releases/download/actual-server-0.0.1/actual-server-0.0.1.tgz
     version: 0.0.1
   jellyfin:
+  - apiVersion: v2
+    appVersion: 10.10.7
+    created: "2025-08-07T17:57:19.10741139Z"
+    description: Jellyfin is a Free Software Media System that puts you in control
+      of managing and streaming your media.
+    digest: ba1983393aaac08db240c35c2b4fbbc4bad69fafa294957d816bc2dd44593e47
+    keywords:
+    - media
+    - streaming
+    - tvshows
+    - movies
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: jellyfin
+    type: application
+    urls:
+    - https://github.com/GenericEric/helm-charts/releases/download/jellyfin-0.1.9/jellyfin-0.1.9.tgz
+    version: 0.1.9
   - apiVersion: v2
     appVersion: 10.10.7
     created: "2025-07-13T15:14:19.888747086Z"
@@ -831,6 +869,24 @@ entries:
     version: 0.0.1
   searxng:
   - apiVersion: v2
+    appVersion: 2025.08.7
+    created: "2025-08-07T17:57:19.239795225Z"
+    description: Privacy-respecting, hackable metasearch engine
+    digest: a51b78567e9a12b6a54646524e7619b00e7cce66ed1ae17cef58b595e077c49e
+    keywords:
+    - search
+    - privacy
+    - engine
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: searxng
+    type: application
+    urls:
+    - https://github.com/GenericEric/helm-charts/releases/download/searxng-0.1.2/searxng-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
     appVersion: 2025.07.11
     created: "2025-07-13T15:14:20.235681869Z"
     description: Privacy-respecting, hackable metasearch engine
@@ -1259,6 +1315,26 @@ entries:
     version: 0.0.2
   unifi-controller:
   - apiVersion: v2
+    appVersion: 9.3.45
+    created: "2025-08-07T17:57:19.344701479Z"
+    description: The Unifi-network-application software is a powerful, enterprise
+      wireless software engine ideal for high-density client deployments requiring
+      low latency and high uptime performance.
+    digest: d391855f113c833852bcd95fd2af114fb87dc0c620ca9dd6e52c32c70e9f12e3
+    keywords:
+    - unifi
+    - wifi
+    - networking
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: unifi-controller
+    type: application
+    urls:
+    - https://github.com/GenericEric/helm-charts/releases/download/unifi-controller-0.5.9/unifi-controller-0.5.9.tgz
+    version: 0.5.9
+  - apiVersion: v2
     appVersion: 9.2.87
     created: "2025-07-13T15:14:20.40603946Z"
     description: The Unifi-network-application software is a powerful, enterprise
@@ -1640,6 +1716,24 @@ entries:
     version: 0.0.4
   vaultwarden:
   - apiVersion: v2
+    appVersion: 1.34.3
+    created: "2025-08-07T17:57:19.463626609Z"
+    description: Unofficial Bitwarden compatible server written in Rust.
+    digest: ca9cee16679ba8d99addbd5bde4a6770f899cfde0c44f39ea7eae9e3e5ba0943
+    keywords:
+    - vaultwarden
+    - passwords
+    - bitwarden
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: vaultwarden
+    type: application
+    urls:
+    - https://github.com/GenericEric/helm-charts/releases/download/vaultwarden-0.3.8/vaultwarden-0.3.8.tgz
+    version: 0.3.8
+  - apiVersion: v2
     appVersion: 1.34.1
     created: "2025-06-12T13:26:02.193147088Z"
     description: Unofficial Bitwarden compatible server written in Rust.
@@ -1909,4 +2003,4 @@ entries:
     urls:
     - https://github.com/GenericEric/helm-charts/releases/download/vaultwarden-0.0.1/vaultwarden-0.0.1.tgz
     version: 0.0.1
-generated: "2025-07-13T15:14:20.406549238Z"
+generated: "2025-08-07T17:57:19.464105407Z"
