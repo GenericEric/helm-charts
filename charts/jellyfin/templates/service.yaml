@@ -8,8 +8,8 @@ metadata:
 spec:
   selector:
     app: {{ .Values.appName }}
-  type: {{ .Values.ports.type }}
-  loadBalancerIP: {{ .Values.ports.loadBalancerIP }}
+  type: {{ .Values.service.type }}
+  loadBalancerIP: {{ .Values.service.loadBalancerIP }}
   externalTrafficPolicy: Local
   sessionAffinity: None
   sessionAffinityConfig:
