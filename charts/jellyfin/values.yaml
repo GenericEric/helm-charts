@@ -3,7 +3,7 @@ namespace: jellyfin
 
 image:
   repository: linuxserver/jellyfin
-  tag: 10.10.7ubu2404-ls73
+  tag: 10.10.7ubu2404-ls75
   imagePullPolicy: IfNotPresent
 
 env:
@@ -14,6 +14,8 @@ env:
   PGID: 1000
 
 service:
+  type: ClusterIP
+  loadBalancerIP: 10.10.10.10
   port: 8096
 
 ingress:
